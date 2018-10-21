@@ -7,10 +7,10 @@ spec:
   template:
     metadata:
       labels:
-        app: nodeapp/ID/nodepp:1.0
+        app: nodeapp/exalted-point-220022/nodeapp:1.0
     spec:
       containers:
       - name: nodeapp
-        image: gcr.io
+        image: gcr.io/exalted-point-220022/nodeapp:1.0
         ports:
         - containerPort: 3000
