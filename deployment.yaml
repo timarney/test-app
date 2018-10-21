@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: nodeapp
-        image: gcr.io/exalted-point-220022/nodeapp:1.0
+        image: gcr.io/exalted-point-220022/test-app
         ports:
         - containerPort: 3000
