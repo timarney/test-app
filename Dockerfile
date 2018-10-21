@@ -1,6 +1,10 @@
 FROM node:alpine
-COPY package.json package.json
+WORKDIR /usr/src/site/
+COPY package*.json ./
 RUN npm install
-EXPOSE 3000
+
 COPY . .
+
+EXPOSE 8080
+
 CMD ["npm", "start"]
