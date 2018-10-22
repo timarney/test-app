@@ -13,7 +13,7 @@ steps:
   - name: "gcr.io/exalted-point-220022/$REPO_NAME:$COMMIT_SHA"
     id: test
     entrypoint: "npm"
-    args: ["test"]
+    args: ["install","test"]
     #env:
      # - "CLOUDSDK_COMPUTE_ZONE=us-central1-a"
      # - "CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1"
