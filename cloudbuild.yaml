@@ -10,3 +10,9 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     id: push
     args: ["push", "gcr.io/exalted-point-220022/$REPO_NAME:$COMMIT_SHA"]
+  - name: "gcr.io/exalted-point-220022/$REPO_NAME:$COMMIT_SHA"
+    id: test
+    entrypoint: /bin/sh
+    args: ["npm test"]
+    waitFor:
+      - push
