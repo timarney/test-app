@@ -14,18 +14,13 @@ steps:
     id: test
     entrypoint: "npm"
     args: ["install","test"]
-    #env:
-     # - "CLOUDSDK_COMPUTE_ZONE=us-central1-a"
-     # - "CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1"
-  #- name: "gcr.io/cloud-builders/kubectl"
-    #waitFor:
-      #- push
-    #id: deploy
-    #args:
-      #- "set"
-      #- "image"
-      #- "deployment/myapp"
-      #- "myapp=gcr.io/exalted-point-220022/$REPO_NAME:$COMMIT_SHA"
-    #env:
-     # - "CLOUDSDK_COMPUTE_ZONE=us-central1-a"
-     # - "CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1"
+  - name: "gcr.io/cloud-builders/kubectl"
+    id: deploy
+    args:
+      - "set"
+      - "image"
+      - "deployment/myapp"
+      - "myapp=gcr.io/exalted-point-220022/$REPO_NAME:$COMMIT_SHA"
+    env:
+      - "CLOUDSDK_COMPUTE_ZONE=us-central1-a"
+      - "CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1"
