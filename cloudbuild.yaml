@@ -16,7 +16,7 @@ steps:
     id: test
     entrypoint: npm
     args:
-      args: ["npm test"]
+      args: ["test"]
     #env:
      # - "CLOUDSDK_COMPUTE_ZONE=us-central1-a"
      # - "CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1"
