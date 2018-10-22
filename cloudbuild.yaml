@@ -11,12 +11,9 @@ steps:
     id: push
     args: ["push", "gcr.io/exalted-point-220022/$REPO_NAME:$COMMIT_SHA"]
   - name: "gcr.io/exalted-point-220022/$REPO_NAME:$COMMIT_SHA"
-    waitFor:
-      - push
     id: test
     entrypoint: "npm"
-    args:
-      args: ["test"]
+    args: ["test"]
     #env:
      # - "CLOUDSDK_COMPUTE_ZONE=us-central1-a"
      # - "CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1"
