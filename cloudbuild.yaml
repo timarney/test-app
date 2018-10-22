@@ -14,7 +14,7 @@ steps:
     waitFor:
       - push
     id: test
-    entrypoint: npm
+    entrypoint: "npm"
     args:
       args: ["test"]
     #env:
