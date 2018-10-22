@@ -14,6 +14,17 @@ steps:
     id: test
     entrypoint: "npm"
     args: ["install","test"]
+  - name: gcr.io/cloud-builders/gcloud
+   id: credentials
+   args:
+   - container
+   - clusters
+   - get-credentials
+   - "your-first-cluster-1"
+   - --zone
+   - "us-central1-a"
+   - --project
+   - "$PROJECT_ID" 
   - name: "gcr.io/cloud-builders/kubectl"
     id: deploy
     args:
