@@ -26,7 +26,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - image: gcr.io/exalted-point-220022/github-timarney-test-app:$COMMIT_SHA
+      - image: gcr.io/exalted-point-220022/github-timarney-test-app:1606b4ee2146e14c7b6e68e7edfd8e3badadd3e3
         imagePullPolicy: IfNotPresent
         name: github-timarney-test-app
         resources: {}
